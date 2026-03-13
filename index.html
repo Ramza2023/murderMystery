@@ -13,7 +13,7 @@
 
 <h1>7T Murder Mystery</h1>
 
-<button py-click="run_game()">Start Game</button>
+<button id="start">Start Game</button>
 
 <div id="output"></div>
 
@@ -26,7 +26,7 @@ students = ["Asher","Alden","Patrick","Ramza","Ryu","Panglima","Kingston","Colli
 
 roles = ["Victim","Who Found Body","Last Seen With","Detective","Prime Suspect","Arrested","Red Herring","Killer"]
 
-def run_game():
+def run_game(event=None):
 
     shuffled = students.copy()
     random.shuffle(shuffled)
@@ -37,6 +37,10 @@ def run_game():
         result += f"{roles[i]}: {shuffled[i]}<br>"
 
     document.getElementById("output").innerHTML = result
+
+
+button = document.getElementById("start")
+button.addEventListener("click", run_game)
 
 </py-script>
 
