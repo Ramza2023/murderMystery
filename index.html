@@ -1,6 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>7T Murder Mystery</title>
+
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+</head>
+
 <body>
 
-<h2>7T Murder Mystery</h2>
+<h1>7T Murder Mystery</h1>
 
 <button py-click="run_game()">Start Game</button>
 
@@ -9,14 +20,11 @@
 <py-script>
 
 import random
-from pyscript import display
 from js import document
 
-students = ["Asher","Alden","Patrick","Ramza","Ryu","Panglima",
-"Kingston","Collin","Kyumin","Keyza","Ragya"]
+students = ["Asher","Alden","Patrick","Ramza","Ryu","Panglima","Kingston","Collin","Kyumin","Keyza","Ragya"]
 
-roles = ["Victim","Who Found Body","Last Seen With",
-"Detective","Prime Suspect","Arrested","Red Herring","Killer"]
+roles = ["Victim","Who Found Body","Last Seen With","Detective","Prime Suspect","Arrested","Red Herring","Killer"]
 
 def run_game():
 
