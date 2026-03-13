@@ -1,0 +1,36 @@
+<body>
+
+<h2>7T Murder Mystery</h2>
+
+<button py-click="run_game()">Start Game</button>
+
+<div id="output"></div>
+
+<py-script>
+
+import random
+from pyscript import display
+from js import document
+
+students = ["Asher","Alden","Patrick","Ramza","Ryu","Panglima",
+"Kingston","Collin","Kyumin","Keyza","Ragya"]
+
+roles = ["Victim","Who Found Body","Last Seen With",
+"Detective","Prime Suspect","Arrested","Red Herring","Killer"]
+
+def run_game():
+
+    shuffled = students.copy()
+    random.shuffle(shuffled)
+
+    result = ""
+
+    for i in range(len(roles)):
+        result += f"{roles[i]}: {shuffled[i]}<br>"
+
+    document.getElementById("output").innerHTML = result
+
+</py-script>
+
+</body>
+</html>
